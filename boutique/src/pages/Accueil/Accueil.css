@@ -1,0 +1,22 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+
+}
+.Nika-text{
+    display: flex;
+    justify-content: center;
+}
+.Nika-text p{
+    max-width: 70%;
+    font-size: 20px;
+    text-align: justify;
+    text-align-last: center;
+}

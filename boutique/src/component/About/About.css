@@ -1,0 +1,20 @@
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 20px;
+}
+.header .about{
+  -top: 10px;
+  height: 500px;
+  width: 97%;
+  margin: auto;
+  background-color: blueviolet;
+}
+section{
+  height: auto;
+  width: 100%;
+  margin-top: 210px;
+}

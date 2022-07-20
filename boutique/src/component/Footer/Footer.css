@@ -1,0 +1,65 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.footer .title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer .service{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .societe{
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /* Font Logo */
+  @font-face {
+    font-family: Koldby-DEMO;
+    src: url(../../font/Koldby-DEMO.otf);
+  }
+  /* Font Title */
+  @font-face {
+    font-family:Floane-Bol ;
+    src: url(../../font/Floane-Bold.otf);
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    transition: 1s;
+    animation: slide_down 0.5s ease-out;
+    z-index: 100;
+  }
+  .navigationFooter{
+  display: flex;
+  flex-direction: row;
+  }
+  .navigationFooter.left{
+    background: yellowgreen;
+    height: 250px;
+    width: 15%;
+  }
+  .navigationFooter.center{
+    background: rgb(205, 50, 50);
+    height: 250px;
+    width: 75%;
+  }
+  .navigationFooter.left{
+    background: rgb(66, 50, 205);
+    height: 250px;
+    width: 15%;
+  }

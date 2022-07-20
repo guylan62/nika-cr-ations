@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /* Font Logo */
+  @font-face {
+    font-family: Koldby-DEMO;
+    src: url(../../font/Koldby-DEMO.otf);
+  }
+  /* Font Title */
+  @font-face {
+    font-family:Floane-Bol ;
+    src: url(../../font/Floane-Bold.otf);
+  }
+
+ 
+ .pNav{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+  font-family: Koldby-DEMO;
+ }
+  .navbar {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    /* background-color: transparent; */
+    transition: 1s;
+    animation: slide_down 0.5s ease-out;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+  }
+  .navTop{
+    margin: 10px 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(136, 92, 136);
+  }
+  .navCenter{
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: bolder;
+    font-size: 14px;
+    
+  }
+  .navBottom{
+    margin-top: -50px;
+    margin-bottom: 20px;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(160, 17, 136);
+    z-index: 2;
+  }
+ 
+  @keyframes slide_down {
+    from {
+      transform: translateY(-50px)
+    }
+ 
+    to {
+      transform: translateY(0);
+    }
+  }
+ 
+  nav.active {
+    background-color: rgb(26, 26, 26);
+
+  }
+ 
+  nav ul.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: Floane-Bol; */
+    font-weight: 900;
+  }
+ 
+  nav ul.nav-links li {
+    list-style-type: none;
+ 
+  }
+ 
+  nav ul.nav-links li .link-item,
+  .brand,
+  .right-item {
+    position: relative;
+    text-decoration: none;
+    padding: 15px;
+    color: rgb(3, 3, 3);
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+  
+  }
+ 
+  nav ul.nav-links li .link-item:hover,
+  .brand:hover,
+  .right-item:hover{
+    color: rgb(218, 74, 141);
+  }
+ 
+  nav ul.nav-links li .link-item:hover:after {
+    transform: scaleX(1);
+  }
+ 
+  nav ul.nav-links li .link-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 20px;
+    height: 3px;
+    bottom: .5em;
+    left: 0;
+    background-color:rgb(218, 74, 141);
+    transition: transform 0.25s ease-out;
+  }
+ 
+ 
+  Menu.burger,
+  #react-burger-menu-btn,
+  .bm-burger-bars {
+    display: none;
+  }
+ 
+  nav.bm-item {
+    display: flex;
+  }
+ 
+  @media screen and (max-width: 967px) {
+ 
+    Menu.burger,
+    #react-burger-menu-btn,
+    .bm-burger-bars {
+      display: block;
+    }
+ 
+    /* Position and sizing of burger button */
+    .bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      right: 36px;
+      top: 36px;
+ 
+    }
+ 
+    .brand {
+      width: fit-content;
+    }
+ 
+    .navbar {
+      display: none;
+    }
+ 
+    #react-burger-menu-btn {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+      font-size: 0px;
+      background: #3a5466;
+      cursor: pointer;
+    }
+ 
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+      background: #373a47;
+    }
+ 
+ 
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+      height: 24px;
+      width: 24px;
+      padding: 20px;
+      color: #373a47;
+    }
+ 
+    /* Color/shape of close button cross */
+    .bm-cross {
+      background: #bdc3c7;
+    }
+ 
+    /*
+   Sidebar wrapper styles
+   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+   */
+ 
+    .bm-menu-wrap {
+      position: fixed;
+      height: 100%;
+    }
+ 
+    /* General sidebar styles */
+    .bm-menu {
+      background: #373a47;
+      padding: 2.5em 1.5em 0;
+      font-size: 1.15em;
+    }
+ 
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+      fill: #373a47;
+    }
+ 
+    /* Wrapper for item list */
+    .bm-item-list {
+      color: #a5980c;
+      padding: 0.8em;
+    }
+ 
+    /* Individual item */
+    .bm-item {
+      display: inline-block;
+    }
+ 
+    /* Styling of overlay */
+    .bm-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+ 
+    nav ul.nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  #menu {
+    cursor: pointer;
+  }
+  #menu ul {
+    position: absolute;
+    margin: 0;
+    padding: 0.25em;
+    min-width: 5em;
+    width: auto;
+    border: 1px solid rgb(17, 19, 20);
+    list-style: none;
+    background: #ffffff;
+  }
+  #menu li {
+    position: relative;
+    padding: 0.25em;
+    padding-right: 2em;
+    background: #fefefe;
+    margin-left: auto;
+    color: black;
+  }
+  #menu ul {
+    left: -9999em;
+    margin-top: 2em;
+    color: black;
+  }
+  #menu li:hover{
+    color: rgb(218, 74, 141);
+  }
+  #menu li:hover > ul {
+    top: 0;
+    left: 0;
+  }

@@ -1,0 +1,22 @@
+.top-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.img-shop{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.img-shop img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(253, 181, 247);
+    
+}
